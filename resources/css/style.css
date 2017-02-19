@@ -63,6 +63,9 @@ align-items: center;
   margin-left: 3rem;
   margin-bottom: 0.25rem;
 }
+.links_menu .site_container{
+  display: none;
+}
 .links{
   display: flex;
   flex-direction: row;
@@ -113,11 +116,17 @@ align-items: center;
   text-align: center;
   padding: 0.5em;
 }
+.info_container{
+  display: flex;
+  justify-content: center;
+}
 .info{
   display:flex;
-justify-content: center;
+  flex-direction: column;
+  width: 35%;
+
 }
-.info .site_container{
+.info_container .site_container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -126,22 +135,22 @@ justify-content: center;
 .locale, .hours{
   background-color: black;
   color: white;
-  padding-left: 2rem;
+  padding-left: 0rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 35%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 2rem;
 }
 .info2{
   display: flex;
-  justify-content: center;
-}
-.info2 .site_container{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4rem;
+  flex-direction: column;
+  width: 35%;
 }
 .mil_time, .lat_long{
-  width: 35%;
+  width: 100%;
+  margin-bottom: 4rem;
+
 }
 footer{
   display: flex;
@@ -150,4 +159,82 @@ footer{
   height: 5rem;
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 1024px){
+  .product{
+    width: 47%;
+  }
+  body{
+    font-size: 16px;
+  }
+  .product.glasses{
+    display:none;
+  }
+  .links .site_container{
+    display: none;
+  }
+  .links_menu{
+    display: flex;
+    justify-content: center;
+    background-color: firebrick;
+  }
+  .links_menu .site_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .menu{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 470px){
+  .product{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+  }
+  .product.glasses, .product.watch{
+    display: none;
+  }
+  .products .site_container{
+    display: flex;
+    justify-content: center;
+  }
+  .banner{
+    height: 15rem;
+  }
+  .banner_box{
+    width: 100%;
+    margin-top: 10rem;
+  }
+  .banner h2{
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  .banner p{
+    font-size: 0.77rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 0.25rem;
+  }
+  .info, .info2{
+    width: 90%;
+  }
+  .info_container .site_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
